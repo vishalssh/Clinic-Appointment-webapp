@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doctor Login | MediCare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #2b7cff, #6fd6ff);
+    }
+
+    .login-container {
+      background: #fff;
+      width: 380px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #2b7cff;
+    }
+
+    .login-container p {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .form-group input:focus {
+      border-color: #2b7cff;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #2b7cff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #1f63cc;
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #2b7cff;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Forgot password modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      width: 320px;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .modal-content h3 {
+      margin-bottom: 10px;
+      color: #2b7cff;
+    }
+
+    .modal-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      margin-top: 10px;
+      background: #ccc;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background: #aaa; 
+    }
+    
+    .register-link {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.register-link a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #2b7cff;
+  color: #2b7cff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+  background: #2b7cff;
+  color: #fff;
+}
+    
+    
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Doctor Login</h2>
+    <p>Access your dashboard securely</p>
+
+    <form action="docLogin.jsp" method="post">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="doctor@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter password" required />
+      </div>
+
+      <button class="login-btn" type="submit">Login</button>
+      <div class="register-link">
+  			<a href="saveDoctorData.jsp">New Doctor Register</a>
+		</div>
+      
+    </form>
+
+    <div class="extra-links">
+      <a href="forgotpass.jsp"> Forgot Password</a>
+    </div>
+  </div>
+
+  
+
+</body>
+</html>
